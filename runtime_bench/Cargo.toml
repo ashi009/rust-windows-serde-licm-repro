@@ -1,0 +1,11 @@
+[package]
+name = "runtime_bench"
+version = "0.0.0"
+edition.workspace = true
+rust-version.workspace = true
+publish = false
+
+[dependencies]
+monolithic = { path = "../monolithic" }
+flattened = { path = "../flattened" }
+serde_json.workspace = true

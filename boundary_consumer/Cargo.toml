@@ -1,0 +1,10 @@
+[package]
+name = "boundary_consumer"
+version = "0.0.0"
+edition.workspace = true
+rust-version.workspace = true
+publish = false
+
+[dependencies]
+boundary_model = { path = "../boundary_model" }
+serde_json.workspace = true

@@ -1,0 +1,10 @@
+[package]
+name = "direct_consumer"
+version = "0.0.0"
+edition.workspace = true
+rust-version.workspace = true
+publish = false
+
+[dependencies]
+model_only = { path = "../model_only" }
+serde_json.workspace = true

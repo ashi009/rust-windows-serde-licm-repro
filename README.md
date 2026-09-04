@@ -24,17 +24,17 @@ python3 repro.py --bench
 The build targets Windows MSVC but only produces an rlib, so it can be run on
 Windows, macOS, or Linux and does not need a Windows linker.
 
-One run on an Apple Silicon Mac produced:
+One run on GitHub's `windows-latest` runner produced:
 
 | fields | wall time |
 | ---: | ---: |
-| 16 | 0.378 s |
-| 32 | 0.702 s |
-| 64 | 2.463 s |
-| 96 | 6.942 s |
-| 128 | 13.735 s |
+| 16 | 1.326 s |
+| 32 | 2.408 s |
+| 64 | 8.090 s |
+| 96 | 24.690 s |
+| 128 | 62.731 s |
 
-The number of fields increased by 8x while compile time increased by 36x.
+The number of fields increased by 8x while compile time increased by 47x.
 
 To generate one particular size and build it directly:
 

@@ -49,6 +49,8 @@ def build() -> float:
 
 
 def benchmark(counts: list[int]) -> None:
+    subprocess.run(["rustc", "--version", "--verbose"], cwd=ROOT, check=True)
+
     # Populate the target directory with dependencies before timing this crate.
     generate(1)
     build()

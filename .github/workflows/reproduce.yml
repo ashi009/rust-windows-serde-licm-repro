@@ -1,0 +1,17 @@
+name: Reproduce
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install Windows Rust target
+        run: rustup target add x86_64-pc-windows-msvc --toolchain 1.98.0
+      - name: Measure compile time by field count
+        run: python repro.py --bench

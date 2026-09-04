@@ -45,3 +45,6 @@ cargo build --release --target x86_64-pc-windows-msvc --lib
 
 Rust is pinned by `rust-toolchain.toml`, and dependency versions are pinned in
 `Cargo.toml`.
+
+See [EVIDENCE.md](EVIDENCE.md) for MIR/LLVM measurements and a tested
+compiler-side mitigation.
